@@ -1,0 +1,128 @@
+:root{
+    --clr-Dark-cyan: hsl(185, 75%, 39%);
+    --clr-Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-Dark-grayish-blue: hsl(227, 10%, 46%);
+    --clr-Dark-gray: hsl(0, 0%, 59%);
+
+    --ff-primary: 'Kumbh Sans', sans-serif;;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    display: grid;
+    place-content: center; 
+    justify-content: center; 
+    margin: 1rem;
+    background-color: var(--clr-Dark-cyan);
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-position: -0% -150px,120% 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card__container{
+   width: 280px;
+   height: 300px;
+   background-color: white;
+   border-radius: 1rem;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   overflow: hidden;
+}
+
+.upper__Container{
+    height: 120px;
+    background-image: url(images/bg-pattern-card.svg);
+}
+.image__container{
+    width: 80px;
+    height: 80px;
+}
+.image__container img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: translate(130%,100%);
+    border: 4px solid white;
+}
+.lower__container{
+    height: 180px;
+    background-color: white;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.lower__container .person__name span{
+    color: var(--clr-Dark-gray);
+    font-weight: 300;
+}
+
+.place{
+    font-size: .8rem;
+    color: var(--clr-Dark-gray);
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(177, 177, 177, 0.5);
+    margin: 1rem 0;
+}
+
+.achievements__container{
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.achievement p{
+    font-size: .8rem;
+    color: var(--clr-Dark-gray);
+}
+
+@media (max-width: 300px){
+    .card__container{
+        width: 250px; 
+    }
+    .image__container img{
+        transform: translate(115%,100%);
+    }
+}
